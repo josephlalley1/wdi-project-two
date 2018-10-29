@@ -3,8 +3,25 @@ a {
   text-decoration: none;
 }
 
+input {
+  font-family: 'Helvetica Neue';
+}
+
 hr {
+  background-color: #d2e9e0;
   margin: 3px 50px 10px 50px;
+}
+
+textarea {
+  font-family: 'Helvetica Neue';
+}
+
+textarea:last-of-type{
+  margin-top: 14px;
+}
+
+.label {
+  font-weight: 400;
 }
 
 .article-title {
@@ -55,4 +72,54 @@ hr {
 .sign-in {
   margin-left: 60px;
   color: #03a87c;
+}
+
+.form-container {
+  padding: 10px 50px 0 50px;
+}
+
+.title-box {
+  border: 1px solid #d2e9e0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 266px;
+  box-shadow: inset 0 0 0 #000000;
+  border-radius: 3px;
+  width: 30%;
+}
+
+.link-box {
+  border: 1px solid #d2e9e0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  box-shadow: inset 0 0 0 #000000;
+  border-radius: 3px;
+  width: 50%;
+}
+
+.content-boxes {
+  border: 1px solid #d2e9e0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  box-shadow: inset 0 0 0 #000000;
+  border-radius: 3px;
+}
+
+.textarea {
+  border: 1px solid #d2e9e0;
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.article-submit {
+  background-color: #75b495;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  padding: 10px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

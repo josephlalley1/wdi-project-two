@@ -3,6 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+const auth = require('./lib/auth');
 const session = require('express-session');
 const env = require('./config/environment');
 const router = require('./config/routes');
@@ -31,6 +32,8 @@ app.use('*', function(req, res, next) {
   console.log('Incoming request:', req.method, req.url);
   next();
 });
+
+app.use('*', auth.checkAuthStatus);
 
 app.use(router);
 

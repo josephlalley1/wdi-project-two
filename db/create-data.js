@@ -11,10 +11,10 @@ const newArticles = [
     content: 'Criminal hackers have been targeting Instagram users with short or unique usernames, as well as people who own Bitcoin. To steal the victim’s accounts or cryptocurrencies, the hackers first seize the cell phone numbers of targets, which gives them the ability to reset passwords on any account linked to a given number.'
   },
   {
-    title: 'The SIM Hijackers',
-    coverimg: 'https://video-images.vice.com/articles/5b324d2cf3af8d00076a6d11/lede/1530023267166-hackers_motherboard5.jpeg?crop=0.9977777777777778xw%3A1xh%3Bcenter%2Ccenter&resize=2000%3A',
-    frontPageSummary: 'Meet the hackers who flip seized Instagram handles and cryptocurrency in a shady, buzzing underground market for stolen accounts and usernames. Their victims’ weakness? Phone numbers.',
-    content: 'It seemed like any other warm September night in the suburbs of Salt Lake City. Rachel Ostlund had just put her kids to bed and was getting ready to go to sleep herself. She was texting with her sister when, unexpectedly, her cell phone lost service. The last message Rachel received was from T-Mobile, her carrier. The SIM card for her phone number, the message read, had been “updated.”'
+    title: 'An ISP Left Corporate Passwords, Keys, and All its Data Exposed on the Internet',
+    coverimg: 'https://video-images.vice.com/articles/5bcf506f61347e00069d9daa/lede/1540314056277-shutterstock_582236128.jpeg?crop=1xw%3A0.7959214808787632xh%3Bcenter%2Ccenter&resize=2000%3A',
+    frontPageSummary: 'The ISP, called Pocket iNet, left 73 gigabytes of extremely sensitive internet available for anyone to see.',
+    content: 'In what’s becoming a bit of a trend in modern technical incompetence, yet another company has left oodles of private company data sitting openly accessible on an Amazon cloud server. According to a new report by the security researchers at UpGuard, a Washington-based ISP by the name of Pocket iNet left 73 gigabytes of essential operational data publicly exposed in a misconfigured Amazon S3 storage bucket for months.'
   }
 ];
 
