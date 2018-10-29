@@ -1,0 +1,11 @@
+<div class="columns is-multiline is-2 article-container">
+  <% articles.forEach(article => {%>
+    <div class="column is-4">
+      <a href="/articles/<%= article.id %>">
+      <img src="<%= article.coverimg %>" class="coverimg"/>
+      <h3><%= article.title %></h3>
+      <p><%= article.frontPageSummary %></p>
+      </a>
+    </div>
+  <% }) %>
+</div>
