@@ -11,25 +11,5 @@
   <body onload=hidePopupOnload()>
     <% include ./partials/header %>
     <%- body %>
-    <div class="backgroundCover" id="backgroundCover">
-      <div class="registerPopup" id="registerPopup">
-      </div>
-    </div>
   </body>
-  <script type="text/javascript">
-  const popup = document.getElementById('registerPopup');
-  const backgroundCover = document.getElementById('backgroundCover');
-  const register = document.getElementById('register');
-
-  function hidePopupOnload() {
-    popup.style.visibility = "hidden";
-    backgroundCover.style.visibility = "hidden";
-  }
-
-  function showPopupOnClick() {
-    popup.style.visibility = "hidden";
-    backgroundCover.style.visibility = "hidden";
-  }
-
-  </script>
 </html>
