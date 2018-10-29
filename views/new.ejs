@@ -1,11 +1,11 @@
 <div class="field form-container">
   <label class="label">Submit your own article to Honeypot</label>
   <div class="control">
-    <form action="/articles" method="post">
-      <input class="input title-box" type="text" placeholder="Article Title">
-      <input class="input link-box" type="text" placeholder="Cover Image (imgur.com/example)">
-      <textarea class="textarea has-fixed-size content-boxes" placeholder="Add a small summary of your article" rows="3"></textarea>
-      <textarea class="textarea has-fixed-size content-boxes" placeholder="Write your content" rows="10"></textarea>
+    <form action="/articles" method="post" id="newarticle">
+      <input class="input title-box" type="text" placeholder="Article Title" name="title">
+      <input class="input link-box" type="text" placeholder="Cover Image (imgur.com/example)" name="coverimg">
+      <textarea type="text" name="frontPageSummary" class="textarea has-fixed-size content-boxes" placeholder="Add a small summary of your article" rows="3" form="newarticle"></textarea>
+      <textarea type="text" name="content" class="textarea has-fixed-size content-boxes" placeholder="Write your content" rows="10" form="newarticle"></textarea>
       <button class="article-submit">Submit your article !</button>
     </form>
   </div>
