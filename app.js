@@ -7,6 +7,7 @@ const session = require('express-session');
 const env = require('./config/environment');
 const router = require('./config/routes');
 
+
 mongoose.connect(env.dbUri);
 
 const app = express();

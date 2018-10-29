@@ -8,21 +8,28 @@
     <meta charset="utf-8">
     <title>Honeypot - with a thousand lies and a good disguise.</title>
   </head>
-  <body>
-    <div class="columns is-multiline nav-bar">
-      <div class="column is-2">
-        <h1 class="blog-title">Honeypot</h1>
-      </div>
-      <div class="column is-6">
-      </div>
-      <div class="column is-2">
-        <h1 class="nav-content register">Become a member</h1>
-      </div>
-      <div class="column is-2">
-        <h1 class="nav-content sign-in">Sign in</h1>
+  <body onload=hidePopupOnload()>
+    <% include ./partials/header %>
+    <%- body %>
+    <div class="backgroundCover" id="backgroundCover">
+      <div class="registerPopup" id="registerPopup">
       </div>
     </div>
-    <hr>
-    <%- body %>
   </body>
+  <script type="text/javascript">
+  const popup = document.getElementById('registerPopup');
+  const backgroundCover = document.getElementById('backgroundCover');
+  const register = document.getElementById('register');
+
+  function hidePopupOnload() {
+    popup.style.visibility = "hidden";
+    backgroundCover.style.visibility = "hidden";
+  }
+
+  function showPopupOnClick() {
+    popup.style.visibility = "hidden";
+    backgroundCover.style.visibility = "hidden";
+  }
+
+  </script>
 </html>

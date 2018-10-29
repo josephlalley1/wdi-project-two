@@ -51,3 +51,25 @@ hr {
   margin-left: 60px;
   color: #03a87c;
 }
+
+.backgroundCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255,255,255,.8);
+  width: 100%;
+}
+
+.registerPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #D7EFEE;
+  width: 900px;
+  height: 550px;
+}
