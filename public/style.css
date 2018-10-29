@@ -1,11 +1,43 @@
+hr {
+  margin: 3px 50px 10px 50px;
+}
+
+.column {
+  padding-bottom: 0;
+}
+
+.blog-title {
+  font-size: 40px;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: -8px;
+}
+
+.nav-content {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Helvetica Neue';
+  margin-top: 20px;
+  font-weight: 400;
+}
+
 .nav-bar {
-  padding: 20px;
+  padding: 10px 50px 0 50px;
+  margin-bottom: 1px;
 }
 
 .article-container {
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 
 .coverimg {
   max-width: 100%
+}
+
+.sign-in {
+  margin-left: 40px;
+  border-radius: 4px;
+  border: 1px solid #03a87c;
+  color: #03a87c;
 }
