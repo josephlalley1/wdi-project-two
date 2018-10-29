@@ -3,8 +3,8 @@
     <div class="column is-4">
       <a href="/articles/<%= article.id %>">
       <img src="<%= article.coverimg %>" class="coverimg"/>
-      <h3><%= article.title %></h3>
-      <p><%= article.frontPageSummary %></p>
+      <h3 class="title article-title"><%= article.title %></h3>
+      <p class="subtitle article-summary"><%= article.frontPageSummary %></p>
       </a>
     </div>
   <% }) %>
