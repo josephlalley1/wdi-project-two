@@ -88,6 +88,15 @@ textarea:last-of-type{
   width: 30%;
 }
 
+.registration-box {
+  border: 1px solid #d2e9e0;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-right: 266px;
+  box-shadow: inset 0 0 0 #000000;
+  border-radius: 3px;
+}
+
 .link-box {
   border: 1px solid #d2e9e0;
   margin-top: 7px;
@@ -122,4 +131,59 @@ textarea:last-of-type{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.article-page {
+  height: 350px;
+  margin: 3px 50px 10px 50px;
+}
+
+.showHeaderImg {
+  float: right;
+  height: 350px;
+}
+
+.hr-changes {
+  display: block;
+  margin: 0;
+  background-color: white;
+}
+
+.hr-comments {
+  margin: 23px 350px 10px 350px;
+}
+
+.article-content {
+  padding-right: 720px;
+}
+
+.comment-box {
+  color: white;
+  margin: auto;
+  width: 640px;
+}
+
+.profile-pic {
+  border: 1px solid black;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.comment-profile {
+  text-align: center;
+  width: 64px;
+  border-right: 2px solid #d5e7df;
+}
+
+.comment-text {
+  color: black;
+  float: right;
+  width: calc(100% - 70px);
+}
+
+.registration-container {
+  width: 350px;
+  height: 300px;
+  margin: auto;
 }

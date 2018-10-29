@@ -1,11 +1,15 @@
 <div class="columns is-multiline nav-bar">
   <div class="column is-2">
-    <h1 class="blog-title">Honeypot</h1>
+    <a href="/articles"><h1 class="blog-title">Honeypot</h1></a>
   </div>
   <div class="column is-6">
   </div>
   <div class="column is-2">
+    <% if (locals.isLoggedIn) { %>
+    <a href="/articles/new"><h1 class="nav-content register">Submit an article</h1></a>
+  <% } else { %>
     <a href="/register"><h1 class="nav-content register">Become a member</h1></a>
+  <% } %>
   </div>
   <div class="column is-2">
     <h1 class="nav-content sign-in">Sign in</h1>
