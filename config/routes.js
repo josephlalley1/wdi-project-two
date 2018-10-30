@@ -1,4 +1,4 @@
-const honeypotController = require('../controllers/honeypotController');
+const articlesController = require('../controllers/articlesController');
 const authController = require('../controllers/authControllers');
 const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
@@ -8,25 +8,25 @@ router.get('/', function(req, res) {
 });
 
 // INDEX ROUTE
-router.get('/articles', honeypotController.indexRoute);
+router.get('/articles', articlesController.indexRoute);
 
 // NEW ROUTE
-router.get('/articles/new', honeypotController.newRoute);
+router.get('/articles/new', articlesController.newRoute);
 
 // LISTENING TO POST REQUESTS TO /ARTICLES
-router.post('/articles', honeypotController.createRoute);
+router.post('/articles', articlesController.createRoute);
 
 // SHOW ROUTE
-router.get('/articles/:id', honeypotController.showRoute);
+router.get('/articles/:id', articlesController.showRoute);
 
 // UPDATE ROUTE
-router.put('/articles/:id', secureRoute, honeypotController.updateRoute);
+router.put('/articles/:id', secureRoute, articlesController.updateRoute);
 
 // EDIT ROUTE
-router.get('/articles/:id/edit', secureRoute, honeypotController.editRoute);
+router.get('/articles/:id/edit', secureRoute, articlesController.editRoute);
 
 // DELETE ROUTE
-router.delete('/articles/:id', secureRoute, honeypotController.deleteRoute);
+router.delete('/articles/:id', secureRoute, articlesController.deleteRoute);
 
 // LOGIN ROUTE
 router.get('/login', authController.loginFormRoute);
