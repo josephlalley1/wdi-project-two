@@ -6,11 +6,7 @@ function newRoute(req, res) {
 
 function indexRoute(req, res) {
   Articles.find().then(function(result) {
-    const articlesObject = {
-      articles: result
-    };
-    console.log('this is the article object', articlesObject);
-    res.render('index', articlesObject);
+    res.render('index', { articles: result });
   });
 }
 
@@ -22,7 +18,7 @@ function createRoute(req, res) {
 
 function showRoute(req,res) {
   Articles.findById(req.params.id).then(result => {
-    res.render('show', result);
+    res.render('show', { article: result });
   });
 }
 
