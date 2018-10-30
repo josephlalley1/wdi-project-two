@@ -299,3 +299,9 @@ textarea:last-of-type{
   display: inline-block;
   font-size: 16px;
 }
+
+.article-createdby {
+  font-size: 1rem;
+  margin-top: -19px;
+  font-weight: bold;
+}

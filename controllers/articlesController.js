@@ -5,7 +5,7 @@ function newRoute(req, res) {
 }
 
 function indexRoute(req, res) {
-  Articles.find().then(function(result) {
+  Articles.find().populate('addedBy').then(function(result) {
     res.render('articles/index', { articles: result });
   });
 }

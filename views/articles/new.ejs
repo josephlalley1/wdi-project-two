@@ -6,6 +6,7 @@
       <input class="input link-box" type="text" placeholder="Cover Image (imgur.com/example)" name="coverimg">
       <textarea type="text" name="frontPageSummary" class="textarea has-fixed-size content-boxes" placeholder="Add a small summary of your article" rows="3" form="newarticle"></textarea>
       <textarea type="text" name="content" class="textarea has-fixed-size content-boxes" placeholder="Write your content" rows="10" form="newarticle"></textarea>
+      <input type="text" name="addedBy" value='<%= locals.currentUser._id%>'>
       <button class="article-submit">Submit your article !</button>
     </form>
   </div>

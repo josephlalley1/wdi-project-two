@@ -5,6 +5,7 @@
       <img src="<%= article.coverimg %>" class="coverimg"/>
       <h3 class="title article-title"><%= article.title %></h3>
       <p class="subtitle article-summary"><%= article.frontPageSummary %></p>
+      <p class="subtitle article-createdby">Written by - <%= article.addedBy.username %></p>
       </a>
     </div>
   <% }) %>
