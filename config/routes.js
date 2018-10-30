@@ -1,5 +1,6 @@
 const articlesController = require('../controllers/articlesController');
 const authControllers = require('../controllers/authControllers');
+const commentsController = require('../controllers/commentsController');
 const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
@@ -7,11 +8,14 @@ router.get('/', function(req, res) {
   res.render('pages/home');
 });
 
+router.post('/articles/:id/comments', commentsController.create);
+router.delete('/articles/:articleId/comments/:commentId', commentsController.delete);
+
 // INDEX ROUTE
 router.get('/articles', articlesController.indexRoute);
 
 // NEW ROUTE
-router.get('/articles/new', articlesController.newRoute);
+router.get('/articles/new', secureRoute, articlesController.newRoute);
 
 // LISTENING TO POST REQUESTS TO /ARTICLES
 router.post('/articles', articlesController.createRoute);

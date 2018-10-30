@@ -5,7 +5,11 @@ const articlesSchema = mongoose.Schema({
   title: String,
   coverimg: String,
   frontPageSummary: String,
-  content: String
+  content: String,
+  comments: [{
+    user: { type: String, required: true },
+    content: { type: String }
+  }]
 });
 
 const articlesModel = mongoose.model('Articles', articlesSchema);
