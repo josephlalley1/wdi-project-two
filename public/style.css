@@ -245,3 +245,24 @@ textarea:last-of-type{
 .f-icons {
   margin: 0 5px 0 5px;
 }
+
+.editForm {
+  display: inline;
+}
+
+.deleteForm {
+  display: inline;
+}
+
+.delete-submit {
+  background-color: #c96565;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 7px;
+  padding: 10px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

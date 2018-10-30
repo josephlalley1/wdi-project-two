@@ -1,12 +1,15 @@
 <div class="field form-container">
   <label class="label">Edit your article</label>
   <div class="control">
-    <form action="/articles/<%= _id %>?_method=PUT" method="post" id="editarticle">
+    <form action="/articles/<%= _id %>?_method=PUT" method="post" id="editarticle" class="editForm">
       <input class="input title-box" type="text" value="<%= title %>" name="title">
       <input class="input link-box" type="text" value="<%= coverimg %>" name="coverimg">
       <textarea type="text" name="frontPageSummary" class="textarea has-fixed-size content-boxes" rows="3" form="editarticle"><%= frontPageSummary %></textarea>
       <textarea type="text" name="content" class="textarea has-fixed-size content-boxes" rows="10" form="editarticle"><%= content %></textarea>
       <button class="article-submit">Submit your changes !</button>
+    </form>
+    <form action="/articles/<%= _id %>?_method=DELETE" method="post" class="deleteForm">
+      <button class="delete-submit">Delete this article !</button>
     </form>
   </div>
 </div>
