@@ -1,5 +1,5 @@
 const articlesController = require('../controllers/articlesController');
-const authController = require('../controllers/authControllers');
+const authControllers = require('../controllers/authControllers');
 const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
@@ -29,14 +29,14 @@ router.get('/articles/:id/edit', secureRoute, articlesController.editRoute);
 router.delete('/articles/:id', secureRoute, articlesController.deleteRoute);
 
 // LOGIN ROUTE
-router.get('/login', authController.loginFormRoute);
-router.post('/login', authController.loginRoute);
+router.get('/login', authControllers.loginFormRoute);
+router.post('/login', authControllers.loginRoute);
 
 // REGISTER ROUTE
-router.get('/register', authController.registerFormRoute);
-router.post('/register', authController.registerRoute);
+router.get('/register', authControllers.registerFormRoute);
+router.post('/register', authControllers.registerRoute);
 
 // LOGOUT ROUTE
-router.get('/logout', authController.logoutRoute);
+router.get('/logout', authControllers.logoutRoute);
 
 module.exports = router;

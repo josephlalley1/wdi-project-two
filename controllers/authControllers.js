@@ -16,7 +16,9 @@ function loginFormRoute(req, res) {
   res.render('auth/login');
 }
 
-function loginRoute(req, res) {
+function loginRoute(req, res, next) {
+  console.log('we made it to loginRoute');
+  console.log(req.body.email);
   User.findOne({ email: req.body.email })
     .then(result => {
       if (!result) {
@@ -26,6 +28,10 @@ function loginRoute(req, res) {
         req.session.userId = result._id;
         res.redirect('/articles');
       }
+    })
+    .catch(err => {
+      console.log('there was an error ', err);
+      next();
     });
 }
 
