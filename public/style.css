@@ -354,3 +354,18 @@ textarea:last-of-type{
   width: 20px;
   margin-left: 190px;
 }
+
+.deletecommentButton {
+  display: inline-block;
+  border: none;
+  border-radius: 15px;
+  margin-left: 20px;
+  padding: 2px 5px;
+  text-decoration: none;
+  background: #82af94;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}

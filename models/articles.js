@@ -7,6 +7,7 @@ const articlesSchema = mongoose.Schema({
   frontPageSummary: String,
   content: String,
   comments: [{
+    profilepic: { type: String },
     user: { type: String, required: true },
     content: { type: String }
   }]
