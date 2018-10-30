@@ -26,6 +26,7 @@
   <hr class="hr-comments">
 <% }) %>
 
+<% if (locals.isLoggedIn) { %>
 <div class="field comment-container">
  <div class="control">
    <form action="/articles/<%= article._id %>/comments" method="post" id="newcomment">
@@ -36,3 +37,4 @@
    </form>
  </div>
 </div>
+<% } %>
