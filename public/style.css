@@ -1,3 +1,11 @@
+li {
+  margin: 0 5px 0 5px;
+  display: inline-block;
+  list-style-type: none;
+  font-size: 12px;
+  font-family: Open Sans,Trebuchet MS,TazuganeGothic,sans-serif;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -201,5 +209,39 @@ textarea:last-of-type{
 }
 
 .icon {
-  margin-top: 5px;
+  margin-top: 6px;
+}
+
+.footer {
+  background-color: #d5e7df;
+  padding: 0px;
+  height: 196px;
+  margin-top: 50px;
+}
+
+.footer-icons {
+  width: 140px;
+  margin: auto;
+  padding-top: 10px;
+  color: #878787;
+}
+
+.footer-info {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 35px;
+  color: #878787;
+}
+
+.footer-title {
+  color: #878787;
+  padding-top: 20px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.f-icons {
+  margin: 0 5px 0 5px;
 }
