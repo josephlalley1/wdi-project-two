@@ -1,12 +1,12 @@
 const Articles = require('../models/articles');
 
 function newRoute(req, res) {
-  res.render('new');
+  res.render('pages/new');
 }
 
 function indexRoute(req, res) {
   Articles.find().then(function(result) {
-    res.render('index', { articles: result });
+    res.render('pages/index', { articles: result });
   });
 }
 
@@ -18,7 +18,7 @@ function createRoute(req, res) {
 
 function showRoute(req,res) {
   Articles.findById(req.params.id).then(result => {
-    res.render('show', { article: result });
+    res.render('pages/show', { article: result });
   });
 }
 
@@ -32,7 +32,7 @@ function updateRoute(req, res){
 function editRoute(req, res) {
   Articles.findById(req.params.id)
     .then(result => {
-      res.render('edit', result);
+      res.render('pages/edit', result);
     });
 }
 
