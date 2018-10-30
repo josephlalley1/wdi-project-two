@@ -23,7 +23,7 @@ router.get('/articles/:id', honeypotController.showRoute);
 router.put('/articles/:id', secureRoute, honeypotController.updateRoute);
 
 // EDIT ROUTE
-router.get('/articles/:id/edit', honeypotController.editRoute);
+router.get('/articles/:id/edit', secureRoute, honeypotController.editRoute);
 
 // DELETE ROUTE
 router.delete('/articles/:id', secureRoute, honeypotController.deleteRoute);
