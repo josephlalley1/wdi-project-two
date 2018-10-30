@@ -6,6 +6,7 @@
   </div>
   <div class="column is-2">
     <% if (locals.isLoggedIn) { %>
+      <a href="/register"><h1 class="nav-content loggedin-prof">Profile</h1></a>
   <% } else { %>
     <a href="/register"><h1 class="nav-content register">Become a member</h1></a>
   <% } %>
@@ -15,7 +16,7 @@
       <a href="/articles/new"><h1 class="nav-content signed-in-header">Submit an article</h1></a>
     <% } %>
     <% if (locals.isLoggedIn && locals.article) { %>
-      <a href="/articles/<%= article._id %>/edit"><h1 class="nav-content sign-in">Edit this article</h1></a>
+      <a href="/articles/<%= article._id %>/edit"><h1 class="nav-content edit-link">Edit this article</h1></a>
     <% } else if(!locals.isLoggedIn) { %>
       <a href="/login"><h1 class="nav-content sign-in">Sign In</h1></a>
     <% } %>

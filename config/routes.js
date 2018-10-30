@@ -4,7 +4,7 @@ const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
 router.get('/', function(req, res) {
-  res.render('home');
+  res.render('pages/home');
 });
 
 // INDEX ROUTE
