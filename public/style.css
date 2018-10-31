@@ -214,7 +214,7 @@ textarea:last-of-type{
 
 .article-page {
   height: 350px;
-  margin: 3px 50px 10px 50px;
+  margin: 3px 50px 42px 50px;
 }
 
 .showHeaderImg {
@@ -266,6 +266,7 @@ textarea:last-of-type{
   height: 354px;
   margin: auto;
   padding-top: 80px;
+  margin-bottom: 50px;
 }
 
 .login-container {
@@ -273,6 +274,7 @@ textarea:last-of-type{
   height: 354px;
   margin: auto;
   padding-top: 110px;
+  margin-bottom: 50px;
 }
 
 .comment-container {
@@ -288,7 +290,6 @@ textarea:last-of-type{
 .footer {
   background-color: #d5e7df;
   padding: 0px;
-  position: absolute;
   height: 196px;
   width: 100%;
   bottom: 0;
