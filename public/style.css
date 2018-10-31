@@ -288,8 +288,10 @@ textarea:last-of-type{
 .footer {
   background-color: #d5e7df;
   padding: 0px;
+  position: absolute;
   height: 196px;
-  margin-top: 50px;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer-icons {

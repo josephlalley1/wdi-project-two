@@ -9,7 +9,7 @@
       <a href="/logout"><h1 class="nav-content">Logout</h1></a>
     </div>
     <div class="column is-1">
-      <a href="/profile"><h1 class="nav-content loggedin-prof">Profile</h1></a>
+      <a href="/users/<%= locals.currentUser.id %> "><h1 class="nav-content loggedin-prof">Profile</h1></a>
   <% } else { %>
     <div class="column is-2">
     <a href="/register"><h1 class="nav-content register">Become a member</h1></a>

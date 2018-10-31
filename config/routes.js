@@ -1,6 +1,7 @@
 const articlesController = require('../controllers/articlesController');
 const authControllers = require('../controllers/authControllers');
 const commentsController = require('../controllers/commentsController');
+const userController = require('../controllers/userController');
 const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
@@ -42,5 +43,9 @@ router.post('/register', authControllers.registerRoute);
 
 // LOGOUT ROUTE
 router.get('/logout', authControllers.logoutRoute);
+
+// PROFILE ROUTE
+router.get('/users/:id', userController.profileRoute);
+
 
 module.exports = router;
