@@ -19,8 +19,10 @@
     <% if (locals.isLoggedIn && !locals.article) { %>
       <a href="/articles/new"><h1 class="nav-content signed-in-header">Submit an article</h1></a>
     <% } %>
-    <% if (locals.isLoggedIn && locals.article) { %>
+    <% if (locals.isLoggedIn && locals.article && locals.currentUser.username === article.addedBy.username) { %>
       <a href="/articles/<%= article._id %>/edit"><h1 class="nav-content edit-link">Edit this article</h1></a>
+      <% } else if (locals.isLoggedIn && locals.article && locals.currentUser.username !== article.addedBy.username) { %>
+        <a href="/articles/new"><h1 class="nav-content signed-in-header">Submit an article</h1></a>
     <% } else if(!locals.isLoggedIn) { %>
       <a href="/login"><h1 class="nav-content sign-in">Sign In</h1></a>
     <% } %>
