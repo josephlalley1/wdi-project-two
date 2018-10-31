@@ -9,7 +9,8 @@ const articlesSchema = mongoose.Schema({
   comments: [{
     profilepic: { type: String },
     user: { type: String, required: true },
-    content: { type: String }
+    content: { type: String },
+    addedBy: { type: mongoose.Schema.ObjectId, ref: 'User' }
   }]
 });
 
