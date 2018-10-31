@@ -217,9 +217,30 @@ textarea:last-of-type{
   margin: 3px 50px 42px 50px;
 }
 
+.profile-page {
+  height: 350px;
+  margin: 3px 50px 42px 50px;
+}
+
+.profile-container {
+  height: 350px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+.profile-content {
+  
+}
+
 .showHeaderImg {
   float: right;
   height: 350px;
+}
+
+.profilePagePic {
+  height: 170px;
+  border-radius: 50%;
 }
 
 .hr-changes {
