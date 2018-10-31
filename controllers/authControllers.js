@@ -21,7 +21,7 @@ function loginRoute(req, res, next) {
   console.log(req.body.email);
   User.findOne({ email: req.body.email })
     .then(result => {
-      if (!result) {
+      if (!result || result.password !== req.body.password) {
         res.redirect('/login');
       } else {
         console.log('Logged in');
