@@ -17,7 +17,7 @@ function createRoute(req, res) {
 }
 
 function showRoute(req,res) {
-  Articles.findById(req.params.id).then(result => {
+  Articles.findById(req.params.id).populate('comments.addedBy addedBy').then(result => {
     res.render('articles/show', { article: result });
   });
 }
