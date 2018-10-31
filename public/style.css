@@ -229,7 +229,7 @@ textarea:last-of-type{
 }
 
 .hr-comments {
-  margin: 23px 350px 10px 350px;
+  margin: 0px 440px 10px 440px;
 }
 
 .article-content {
@@ -239,11 +239,11 @@ textarea:last-of-type{
 .comment-box {
   color: white;
   margin: auto;
-  width: 640px;
+  width: 570px;
+  padding-right: 59px;
 }
 
 .profile-pic {
-  border: 1px solid black;
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -352,7 +352,7 @@ textarea:last-of-type{
 
 .loggedin-prof {
   width: 20px;
-  margin-left: 190px;
+  margin-left: 30px;
 }
 
 .deletecommentButton {
