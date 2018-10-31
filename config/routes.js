@@ -6,7 +6,7 @@ const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
 router.get('/', function(req, res) {
-  res.render('pages/home');
+  res.redirect('/articles');
 });
 
 router.post('/articles/:id/comments', commentsController.create);
