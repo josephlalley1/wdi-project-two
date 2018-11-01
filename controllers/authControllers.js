@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Articles = require('../models/articles');
 
 function registerFormRoute(req, res) {
   res.render('auth/register');
@@ -41,10 +42,17 @@ function logoutRoute(req, res) {
   });
 }
 
+function moderateRoute(req, res) {
+  Articles.find().populate('addedBy').then(function(result) {
+    res.render('auth/moderate', { articles: result });
+  });
+}
+
 module.exports = {
   registerFormRoute: registerFormRoute,
   registerRoute: registerRoute,
   loginFormRoute: loginFormRoute,
   loginRoute: loginRoute,
-  logoutRoute: logoutRoute
+  logoutRoute: logoutRoute,
+  moderateRoute: moderateRoute
 };

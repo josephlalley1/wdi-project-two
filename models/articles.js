@@ -10,7 +10,8 @@ const articlesSchema = mongoose.Schema({
     profilepic: { type: String },
     user: { type: String, required: true },
     content: { type: String },
-    addedBy: { type: mongoose.Schema.ObjectId, ref: 'User' }
+    addedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+    moderated: { type: Boolean }
   }]
 });
 
