@@ -9,7 +9,7 @@ User.collection.drop();
 
 const userData = [
   {
-    profilepic: 'https://data.whicdn.com/images/263815632/large.jpg',
+    profilepic: 'https://cdn3.iconfinder.com/data/icons/character/512/41-512.png',
     username: 'Administrator',
     email: 'admin@hp',
     password: 'pass'
