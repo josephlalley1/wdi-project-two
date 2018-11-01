@@ -1,6 +1,6 @@
-<% if (articles.comments) { %>
-  <% articles.comments.forEach(comment => { %>
-    <% if (!comments.moderated) { %>
+<% articles.forEach(article => { %>
+    <% article.comments.forEach(comment => { %>
+    <% if (!comment.moderated) { %>
       <div class="columns comment-box">
         <div class="column is-2 comment-profile">
           <img class="profile-pic is-rounded" src="<%= comment.profilepic %>">
@@ -20,6 +20,7 @@
       <hr class="hr-comments">
     <% } %>
   <% }) %>
-<% } else if (!articles.comments) { %>
-  <h1>hello</h1>
+<% }) %>
+<% if (articles.filter(article => !!article.comments.filter(comment => !comment.moderated).length).length === 0) { %>
+  <h1>There are no comments to be moderated</h1>
 <% } %>
