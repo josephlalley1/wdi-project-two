@@ -47,5 +47,9 @@ router.get('/logout', authControllers.logoutRoute);
 // PROFILE ROUTE
 router.get('/users/:id', userController.profileRoute);
 
+// COMMENTS MODERATION ROUTE
+router.get('/moderate', authControllers.moderateRoute);
+router.put('/articles/:articleId/comments/:commentId');
+router.delete('/articles/:articleId/comments/:commentId', commentsController.delete);
 
 module.exports = router;

@@ -11,7 +11,7 @@ const articlesSchema = mongoose.Schema({
     user: { type: String, required: true },
     content: { type: String },
     addedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
-    moderated: { type: Boolean }
+    moderated: { type: Number, default: 0, min: 0, max: 1 }
   }]
 });
 

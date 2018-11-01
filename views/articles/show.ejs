@@ -11,21 +11,23 @@
 
 <hr class="hr-comments">
 <% article.comments.forEach(comment => { %>
-  <div class="columns comment-box">
-    <div class="column is-2 comment-profile">
-      <img class="profile-pic is-rounded" src="<%= comment.profilepic %>">
-      <p class="subtitle is-6 comment-content"><%= comment.user %></p>
+  <% if (comments.moderated) { %>
+    <div class="columns comment-box">
+      <div class="column is-2 comment-profile">
+        <img class="profile-pic is-rounded" src="<%= comment.profilepic %>">
+        <p class="subtitle is-6 comment-content"><%= comment.user %></p>
+      </div>
+      <div class="column is-10 comment-text">
+        <p class="subtitle is-6"><%= comment.content %></p>
+      </div>
+      <% if (locals.isLoggedIn && comment.addedBy.username === locals.currentUser.username) { %>
+        <form action="/articles/<%= article._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+          <button class="deletecommentButton">X</button>
+        </form>
+      <% } %>
     </div>
-    <div class="column is-10 comment-text">
-      <p class="subtitle is-6"><%= comment.content %></p>
-    </div>
-    <% if (locals.isLoggedIn && comment.addedBy.username === locals.currentUser.username) { %>
-      <form action="/articles/<%= article._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-        <button class="deletecommentButton">X</button>
-      </form>
-    <% } %>
-  </div>
-  <hr class="hr-comments">
+    <hr class="hr-comments">
+  <% } %>
 <% }) %>
 
 <% if (locals.isLoggedIn) { %>
