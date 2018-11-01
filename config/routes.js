@@ -49,7 +49,7 @@ router.get('/users/:id', userController.profileRoute);
 
 // COMMENTS MODERATION ROUTE
 router.get('/moderate', authControllers.moderateRoute);
-router.put('/articles/:articleId/comments/:commentId');
+router.put('/articles/:articleId/comments/:commentId', authControllers.moderateUpdateRoute);
 router.delete('/articles/:articleId/comments/:commentId', commentsController.delete);
 
 module.exports = router;

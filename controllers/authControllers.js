@@ -48,11 +48,23 @@ function moderateRoute(req, res) {
   });
 }
 
+function moderateUpdateRoute(req, res){
+  Articles.findById(req.params.articleId)
+    .then(article => {
+      console.log(article.comments);
+      const comment = article.comments.id(req.params.commentId);
+      comment.set(req.body);
+      return article.save();
+    })
+    .then(() => res.redirect('/moderate'));
+}
+
 module.exports = {
   registerFormRoute: registerFormRoute,
   registerRoute: registerRoute,
   loginFormRoute: loginFormRoute,
   loginRoute: loginRoute,
   logoutRoute: logoutRoute,
-  moderateRoute: moderateRoute
+  moderateRoute: moderateRoute,
+  moderateUpdateRoute: moderateUpdateRoute
 };

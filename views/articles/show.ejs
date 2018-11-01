@@ -10,8 +10,7 @@
 </div>
 
 <hr class="hr-comments">
-<% article.comments.forEach(comment => { %>
-  <% if (comment.moderated) { %>
+  <% article.comments.filter(comment => comment.moderated).forEach(comment => { %>
     <div class="columns comment-box">
       <div class="column is-2 comment-profile">
         <img class="profile-pic is-rounded" src="<%= comment.profilepic %>">
@@ -27,8 +26,8 @@
       <% } %>
     </div>
     <hr class="hr-comments">
-  <% } %>
-<% }) %>
+  <% }) %>
+
 
 <% if (locals.isLoggedIn) { %>
 <div class="field comment-container">
