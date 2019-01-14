@@ -70,9 +70,26 @@ Comment moderation page:
 
 ---
 
+### Code Wins
+
+This snippet below shows how the comment moderation worked in relation to the "Articles" model and the "comments" embedded schema.
+
+```
+comments: [{
+  profilepic: { type: String },
+  user: { type: String, required: true },
+  content: { type: String },
+  addedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+  moderated: { type: Number, default: 0, min: 0, max: 1 }
+}]
+```
+It was a huge win as a comment was defaulted to 0, and where the comments were supposed to be shown on the Article show page, there was code that meant that they would only be shown if the value was equal to 1 (where it would be turned to 1 via the moderation page).
+
+---
+
 ### Challenges and Problems
 
-- Making the moderation system work was a huge challenge and understanding how I was going to approach the problem was a big thing. In the end, I added a field in the embedded schema of "comments" for articles to mark a comment as "moderated" or not. 
+- Making the moderation system work was a huge challenge and understanding how I was going to approach the problem was a big thing. In the end, I added a field in the embedded schema of "comments" for articles to mark a comment as "moderated" or not.
 
 ---
 
